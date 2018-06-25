@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script 
+ src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+</script>  
+<body ng-app="">
+ 
+<h1>AngularJS form validation example.</h1>
+ 
+<form name="myForm">
+Name: <input name="myName" ng-model="myName" required>
+<span ng-show="myForm.myName.$touched && 
+           myForm.myName.$invalid">The name is required.</span>
+<br/><br/>
+Email: <input type="email" name="myEmail" ng-model="myEmail">
+<span ng-show="myForm.myEmail.$touched && 
+               myForm.myEmail.$invalid">Invalid email.</span>
+</form>
+ 
+<p><strong>Input state (Name):</strong></p>
+<h1>{{myForm.myName.$valid}}</h1>
+ 
+<p><strong>Input state (Email):</strong></p>
+<h1>{{myForm.myEmail.$valid}}</h1>
+ 
+</body>
+</html>
